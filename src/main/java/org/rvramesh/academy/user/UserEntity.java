@@ -4,13 +4,15 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+
 @Entity
 public class UserEntity extends PanacheEntity{
-    public string username;
-    public string fullName;
-    public string bio;
-    public string location;
+    public String username;
+    public String fullName;
+    public String bio;
+    public String location;
     public LocalDateTime joiningDate;
-    public string email;
+    public String email;
     public LocalDateTime lastLoginTime;
 }
