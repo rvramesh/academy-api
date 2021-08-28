@@ -6,15 +6,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
+@ApplicationScoped
 public class CourseService {
 
     private final CourseRepository courseRepository;
     private final CourseMapper courseMapper;
 
-    public CourseService(final CourseRepository courseRepository, final CourseMapper courseMapper) {
+    CourseService(final CourseRepository courseRepository, final CourseMapper courseMapper) {
         this.courseRepository = courseRepository;
         this.courseMapper = courseMapper;
     }
